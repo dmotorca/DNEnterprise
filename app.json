@@ -1,16 +1,16 @@
 {
   "expo": {
-    "name": "my-app",
-    "slug": "my-app",
+    "name": "Ride Assist",
+    "slug": "ride-assist",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "ride-assist",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.djmotto2.myapp",
+      "bundleIdentifier": "com.djmotto2.rideassist",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
@@ -24,13 +24,20 @@
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "com.djmotto2.myapp"
+      "package": "com.djmotto2.rideassist"
     },
     "web": {
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
+      [
+        "expo-maps",
+        {
+          "requestPermissions": "true",
+          "LocationPermission": "Allow $(PRODUCT_NAME)to access your location while you are using the app."
+        }
+      ],
       "expo-router",
       [
         "expo-splash-screen",
